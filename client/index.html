@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>autn'n'comment</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+        <link
+            rel="stylesheet"
+            href="/node_modules/angular-material/angular-material.min.css"/>
+        <link
+            rel="stylesheet"
+            href="/client/assets/css/style.css"/>
+    </head>
+    <body
+        id="bdy"
+        ng-app="authAndComment"
+        ng-controller="AppController as ac">
+
+            <comments-list ng-if="ac.auth">
+            </comments-list>
+
+            <!----angular---->
+            <script
+                type="text/javascript"
+                src="/node_modules/angular/angular.js">
+            </script>
+            <script
+                type="text/javascript"
+                src="/node_modules/angular-animate/angular-animate.js">
+            </script>
+            <script
+                type="text/javascript"
+                src="/node_modules/angular-cookies/angular-cookies.min.js">
+            </script>
+            <script
+                type="text/javascript"
+                src="/node_modules/angular-aria/angular-aria.js">
+            </script>
+            <script
+                type="text/javascript"
+                src="/node_modules/angular-material/angular-material.js">
+            </script>
+
+            <!----app---->
+            <script
+                type="text/javascript"
+                src="/client/app.js">
+            </script>
+            <script
+                type="text/javascript"
+                src="/client/app-controller.js">
+            </script>
+            <script
+                type="text/javascript"
+                src="/client/comments-list/comments-list.controller.js">
+            </script>
+            <script
+                type="text/javascript"
+                src="/client/comments-list/comments-list.component.js">
+            </script>
+            
+            <script
+                type="text/javascript"
+                src="/client/add-comment-dialog/controller.js">
+            </script>
+            
+            <!----html2canvas---->
+            <script
+                type="text/javascript"
+                src="/node_modules/html2canvas/dist/html2canvas.min.js">
+            </script>
+    </body>
+</html>

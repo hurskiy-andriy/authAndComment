@@ -1,0 +1,35 @@
+<md-dialog ng-cloak>
+    <md-dialog-content class="comment-dialog-content">
+        <md-input-container class="md-block mb0">
+            <label>
+                Your comment
+            </label>
+            <textarea 
+                ng-model="addCommCntrl.text"
+                md-maxlength="150" 
+                ng-maxlength="150"
+                ng-minlength="2"
+                maxlength="150"
+                rows="5">
+            </textarea>
+        </md-input-container>
+        <div class="err-msg mb16">
+            <span ng-hide="addCommCntrl.err===null">
+                {{addCommCntrl.err}}
+            </span>
+        </div>
+        <div 
+            id="comment-scrn-notif"
+            class="op06">
+                Press Cntrl+S to make screenshot
+        </div>
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button class="md-primary" ng-click="addCommCntrl.close()">
+            Cancel
+        </md-button>
+        <md-button class="md-primary" ng-click="addCommCntrl.send()">
+            Send
+        </md-button>
+    </md-dialog-actions>
+</md-dialog>

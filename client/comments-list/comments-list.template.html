@@ -1,0 +1,58 @@
+<div>
+    <nav class="md-whiteframe-z1 toolbar primary-bckgrnd">
+        Comments List
+    </nav>
+    <div
+        ng-class="{'md-whiteframe-z4': clCntrl.addFabHovered }"
+        ng-mouseenter="clCntrl.addFabHovered = true"
+        ng-mouseleave="clCntrl.addFabHovered = false"
+        ng-click="clCntrl.addComment()"
+        class="add-fab md-whiteframe-z2 accent-bckgrnd">
+            <md-icon md-svg-src="/client/assets/img/ic_add_white_24px.svg">
+            </md-icon>
+            <md-tooltip md-direction="bottom" ng-cloak>
+                Add comment
+            </md-tooltip>
+    </div>
+    <div id="container">
+        <div 
+            class="no-comments"
+            ng-if="clCntrl.comments!==null && clCntrl.comments.length===0">
+                No comments yet
+        </div>
+        <md-list>
+            <md-list-item 
+                class="md-3-line" 
+                ng-repeat="
+                    comment in clCntrl.comments | 
+                                    orderBy : '-'+comment.ts">
+                    <md-icon 
+                        md-svg-src="/client/assets/img/ic_person_white_24px.svg"
+                        class="md-avatar comm-avatar md-avatar-icon">
+                    </md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h4>
+                            {{comment.when_created}}
+                        </h4>
+                        <h3>
+                            {{comment.author}}
+                        </h3>
+                        <p>
+                            {{comment.text}}
+                        </p>
+                        <img 
+                            class="comm-img"
+                            width="64px" 
+                            height="64px" 
+                            ng-src="{{comment.img}}"/>
+                    </div>
+            </md-list-item>
+        </md-list>
+    </div>
+    <div id="loader" ng-show="clCntrl.loading">
+        <div class="h100p inl vam">
+        </div>
+        <md-progress-circular class="inl" md-mode="indeterminate">
+        </md-progress-circular>
+    </div>
+</div>

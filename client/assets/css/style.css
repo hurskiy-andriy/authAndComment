@@ -1,0 +1,68 @@
+.toolbar {
+    height: 64px;
+    color: white;
+    line-height: 64px;
+    padding-left: 16px;
+    font-size: 24px;
+}
+
+.add-fab {
+    position: absolute;
+    top: 44px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-sizing: border-box;
+    outline: none;
+    z-index: 9;
+}
+
+.add-fab md-icon {margin: 8px;}
+.primary-bckgrnd {background-color: #106CC8;}
+.accent-bckgrnd {background-color: rgb(255,171,64);}
+.inl {display: inline-block;}
+.h100p {height: 100%;}
+.vam {vertical-align: middle;}
+.mb0 {margin-bottom: 0;}
+.mb16 {margin-bottom: 16px;}
+.op06 {opacity: 0.6;}
+
+#container {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    background: #FFF;
+}
+
+#loader {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.comment-dialog-content {padding: 24px 16px 0 16px;}
+
+.no-comments {
+    text-align: center;
+    color: rgba(0,0,0,0.6);
+}
+
+.err-msg {
+    height: 16px;
+    color: #FF0000;
+    line-height: 16px;
+}
+
+.err-msg span {font-size: 12px;}
+
+.comm-img {cursor: pointer;}
