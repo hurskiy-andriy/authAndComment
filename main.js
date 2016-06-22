@@ -29,6 +29,11 @@ var GoogleStrategy = require("passport-google-oauth").OAuth2Strategy,
         .use(bodyParser.urlencoded({extended: true}))
         .use(passport.initialize())
         .use(
+            function(req, res, next) {
+                console.log(req.url, req.method, req.body, req.query); 
+                next();
+            })
+        .use(
             "/auth/google", 
             passport.authenticate("google",  {scope: ["profile", "email"]}))
         .use(

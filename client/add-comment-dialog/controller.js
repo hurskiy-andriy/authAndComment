@@ -85,8 +85,7 @@ function addCommentCntrl($scope, $mdDialog, $http, $cookies) {
                             imgCont.innerHTML = 
                                 "<img "+
                                     "id='comment-scrnsht' "+
-                                    "width='48px' "+
-                                    "height='48px' "+
+                                    "width='256px' "+
                                     "src='"+self.img+"'>";
 
                             document
